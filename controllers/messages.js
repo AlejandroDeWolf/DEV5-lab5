@@ -37,6 +37,17 @@ const create = (req, res) => {
     res.json(response);
 };
 
+const update = (req, res) => {
+    const id = req.params.id;
+    const response = {
+        status: 'success',
+        message: `UPDATING message with id ${id}`,
+        data: { id: id, user: req.body.user, message: req.body.message }
+    }
+    res.json(response);
+};
+
 module.exports.getAll = getAll;
 module.exports.getById = getById;
 module.exports.create = create;
+module.exports.update = update;
