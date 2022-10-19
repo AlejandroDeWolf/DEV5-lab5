@@ -57,8 +57,10 @@ const deleteById = (req, res) => {
     res.json(response);
 };
 
-module.exports.getAll = getAll;
-module.exports.getById = getById;
-module.exports.create = create;
-module.exports.update = update;
-module.exports.deleteById = deleteById;
+module.exports = {
+    getAll,
+    getById,
+    create,
+    update,
+    deleteById
+};
