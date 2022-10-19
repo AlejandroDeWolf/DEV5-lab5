@@ -28,6 +28,15 @@ const getById = (req, res) => {
     res.json(response);
 };
 
+const create = (req, res) => {
+    const response = {
+        status: 'success',
+        message: 'CREATING message',
+        data: { user: req.body.user, message: req.body.message }
+    }
+    res.json(response);
+};
 
 module.exports.getAll = getAll;
 module.exports.getById = getById;
+module.exports.create = create;
